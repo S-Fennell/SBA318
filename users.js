@@ -1,4 +1,5 @@
-
+import express from 'express';
+const router = express.Router();
 
 export let users = [
     {
@@ -26,3 +27,5 @@ export let users = [
     age: 35
 }
 ];
+
+export default router;
