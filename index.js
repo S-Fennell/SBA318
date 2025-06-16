@@ -1,12 +1,13 @@
 import express from 'express';
 import { users } from './users.js';
-
-
+import bodyParser from 'body-parser';
 const app = express();
 
 const port = 3000;
 
 app.set('view engine', 'ejs');
+app.use(bodyParser.json());
+app.use(express.static('public'));
 
 app.get('/', (req, res)=>{
     res.render(`views`,{users});
